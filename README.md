@@ -1,3 +1,3 @@
-# perhitungan_bilangan_prima
+# ini repo gabut saya
 
-kode ini merupakan kode untuk menghitung suatu biilanagan prima atau bukan dengan inputan user sebagai batas atas dan 2 (default) sebagai batas bawah   
+rata rata pakek python cuma insyallah kedepannya multi langguage.. bisa untuk bahan belajar jugaa,, semoga bermanfaat :)
