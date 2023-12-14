@@ -1,0 +1,55 @@
+# digunakan untuk mengecek apakah suatu lingkaran sejajar dengan sumbu x atau y
+# diantara x atau y positif atau negatif
+# dengan titik 0,0
+
+# lib
+def sejajar_sumbu_y_positif(x,y):
+    if x == 0 and y >= 0:
+        print("sejajar sumbu y")
+    else :
+        print("eror")
+        
+def sejajar_sumbu_x_positif(x, y):
+    if y == 0 and x >= 0:
+        print("sejajar sumbu x")
+
+def sejejajar_sumbu_x_negatif(x,y):
+    if y == 0 and x <= 0 :
+        print("sejajar sumbu y")
+        
+def sejajar_sumbu_y_negatif(x,y):
+    if x == 0 and y <= 0 :
+        print("sejajar sumbu y")
+        
+def berada_diantara_x_y(x,y):
+    if x > 0 and y > 0:
+        print("titik berada di sumbu positif")
+    elif x < 0 and y > 0:
+        print("titik beradda di sumbu negatif")
+    else:
+        print("syntac eror")
+        
+x = int(input("masukan nilai x : "))
+y = int(input("masukan nilai y : "))
+# titik di antara x dan y
+if y > 0 and x > 0 or x < 0 and y < 0:
+    berada_diantara_x_y(x,y)
+    
+# titik di x postif
+elif x == 0 and y >= 0:
+    sejajar_sumbu_y_positif(x,y)
+
+# titik di y positif
+elif y == 0 and x >= 0:
+    sejajar_sumbu_x_positif(x,y)
+    
+elif x <= 0 and y == 0:
+    sejejajar_sumbu_x_negatif(x,y)
+
+elif y <= 0 and x == 0 :
+    sejejajar_sumbu_y_negatif(x,y)
+    
+else:
+    print("eror")
+        
+  
