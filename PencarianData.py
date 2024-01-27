@@ -32,17 +32,17 @@ numb = [5,5,3,5,13,5,4,3,2,1]
 nilai max - nilai min + 1 => untuk mencari
 rentang nilai dari kumpulan data
 '''
-max_value = max(numb)
-min_value = min(numb)
-range_values = max_value - min_value +1
+nilai_max = max(numb)
+nilai_min = min(numb)
+range_values = nilai_max - nilai_min +1
 
 # membuat list kosong
-count = [0] * range_values
+list_kosong = [0] * range_values
 
 # menghitung frekuensi data setiap num in numbers
 # simpang dalam list kosong
 for num in numb:
-    count[num - min_value] +=1
+    list_kosong[num - nilai_min] +=1
 
 # menghitung akumulasi jumlah list yang di butuhkan
 for i in range(1, range_values):
