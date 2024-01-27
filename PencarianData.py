@@ -1,3 +1,20 @@
+# sqeuncey search
+# number
+numbers = [342,5,23,56,7]
+find = 5
+i = 0
+# terus melakukan perulangan sesuai dengan jumlah index numbers
+while i < len(numbers):
+    i +=1
+    break
+
+if numbers[i] == find:
+  print("ketemu di index ke - ", numbers[i])
+else:
+  print("ga ketemu bang")
+
+
+
 # counting sort
 ''' 
 mengurutkan data dari terkecil sampai ke yang terbesar
