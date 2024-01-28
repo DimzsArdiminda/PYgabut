@@ -55,3 +55,39 @@ for num in numb:
 
 print("Data sebelum diurutkan:", numb)
 print("Data setelah diurutkan:", sorted_numbers)
+
+
+# lebih ringkas
+def countingSort(number):
+    # Menentukan nilai maksimum dan minimum dari kumpulan data
+    max_value = max(number)
+    min_value = min(number)
+    range_values = max_value - min_value + 1
+
+    # List kosong untuk menyimpan frekuensi
+    list_kosong = [0] * range_values
+
+    # Menghitung kemunculan setiap data
+    for i in number:
+        list_kosong[i - min_value] += 1
+
+    # Mengakumulasi jumlah dalam list
+    for i in range(1, len(list_kosong)):
+        list_kosong[i] += list_kosong[i - 1]
+
+    # Membuat list kosong untuk data yang sudah diurutkan
+    angka_urut = [0] * len(number)
+
+    # Mengatur data yang akan diurutkan berdasarkan count list
+    for data in reversed(number):
+        index = list_kosong[data - min_value] - 1
+        angka_urut[index] = data
+        list_kosong[data - min_value] -= 1
+
+    return angka_urut, min_value, max_value
+
+number = [2, 5, 2, 435, 6, 234, 5]
+output, min_val, max_val = countingSort(number)
+print("Kumpulan data yang diurutkan:", output)
+print("Rentang nilai dari kumpulan data:", min_val, "-", max_val)
+
