@@ -23,3 +23,15 @@ if atas >= 2:
     print(f'angka yang termasuk dalam bilangan prima antara 2 sampai dengan {atas} adalah {x}' )
 else:
     print('eror')
+
+
+# faktorial 
+# kode faktorial
+# f(5) = 5 * 4 * 3 * 2 * 1
+# f(5) = 15
+
+fib = 3
+num = 1
+for i in range(fib,1,-1):
+  num = num * i
+  print(num)
