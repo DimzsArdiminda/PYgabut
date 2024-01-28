@@ -25,38 +25,33 @@ step 3 : memisahkan data
 step 4 : pengurutan
 '''
 # inisialisasi angka
-numb = [5,5,3,5,13,5,4,3,2,1]
+numb = [5, 5, 3, 5, 13, 5, 4, 3, 2, 1]
 
 # tentukan rentang nilai dari kumpulan data
-'''
-nilai max - nilai min + 1 => untuk mencari
-rentang nilai dari kumpulan data
-'''
 nilai_max = max(numb)
 nilai_min = min(numb)
-range_values = nilai_max - nilai_min +1
+range_values = nilai_max - nilai_min + 1
 
 # membuat list kosong
 list_kosong = [0] * range_values
 
 # menghitung frekuensi data setiap num in numbers
-# simpang dalam list kosong
+# simpan dalam list kosong
 for num in numb:
-    list_kosong[num - nilai_min] +=1
+    list_kosong[num - nilai_min] += 1
 
-# menghitung akumulasi jumlah list yang di butuhkan
+# menghitung akumulasi jumlah list yang dibutuhkan
 for i in range(1, range_values):
-    count[i] += count[i-1]
+    list_kosong[i] += list_kosong[i - 1]
 
 # membuat list baru
 sorted_numbers = [0] * len(numb)
 
-# pengururtan (memanfaatkan perulangan, kumpulan data, frek komulatif)
-for num in numbers:
-  index = count[num - min_value] - 1
-  sorted_numbers[index] = num
-  count[num - min_value] -= 1
+# pengurutan (memanfaatkan perulangan, kumpulan data, frek komulatif)
+for num in numb:
+    index = list_kosong[num - nilai_min] - 1
+    sorted_numbers[index] = num
+    list_kosong[num - nilai_min] -= 1
 
-print("Data sebelum diurutkan:", numbers)
+print("Data sebelum diurutkan:", numb)
 print("Data setelah diurutkan:", sorted_numbers)
-    
