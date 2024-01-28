@@ -35,3 +35,19 @@ num = 1
 for i in range(fib,1,-1):
   num = num * i
   print(num)
+
+
+# fib
+def FibCalc(number):
+    if number <= 1:
+        return number
+    else:
+        return FibCalc(number - 1) + FibCalc(number - 2)
+
+fib = int(input("Masukkan bilangan Fibonacci yang ingin dicari: "))
+if fib < 0:
+    print("Masukkan bilangan bulat non-negatif.")
+else:
+    result = FibCalc(fib)
+    print(f"Nilai Fibonacci ke-{fib}: {result}")
+
