@@ -51,3 +51,13 @@ else:
     result = FibCalc(fib)
     print(f"Nilai Fibonacci ke-{fib}: {result}")
 
+
+# sum manual 
+array = [1,2,3]
+
+total = 0
+i = 0
+while i < len(array):
+    total = total + array[i]
+    print(total)
+    i += 1
